@@ -4,10 +4,8 @@ import cors from "cors"
 import bodyParser from "body-parser";
 import connectDB from "./config/db.js"
 
-// Load environment variables
 dotenv.config();
 
-// Connect to MongoDB
 connectDB();
 
 const app = express();
@@ -17,7 +15,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 
-// Routes
 import userRoutes from "./routes/userRoutes.js"
 import adminRoutes from "./routes/adminRoutes.js"
 import loanRoutes from "./routes/loanRoutes.js"
